@@ -45,11 +45,24 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 py-10 px-4 font-sans">
-      <div className="max-w-md mx-auto bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
-        <div className="bg-indigo-600 p-6 text-white text-center">
-          <h1 className="text-xl font-bold">Rise Up Conference Food Menu</h1>
-          <p className="text-indigo-100 text-xs mt-1">Select your preferences below</p>
+    // 1. PAGE BACKGROUND WATERMARK
+    // Sets a fixed watermark image that stays stationary while scrolling.
+    // The linear-gradient creates a soft light-slate filter so text stays crisp.
+    <main 
+      className="min-h-screen bg-slate-50 py-10 px-4 font-sans bg-fixed bg-center bg-cover bg-no-repeat"
+      style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.93), rgba(248, 250, 252, 0.93)), url('/images/watermark_pattern.png')" }}
+    >
+      <div className="max-w-md mx-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-md border border-slate-100 overflow-hidden">
+        
+        {/* 2. HEADING WITH IMAGE BANNER */}
+        {/* Replaced the solid purple color with a background image banner. */}
+        {/* The linear-gradient tint ensures the white text stands out perfectly. */}
+        <div 
+          className="bg-cover bg-center p-8 text-white text-center relative"
+          style={{ backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), url('/images/header_banner.jpg')" }}
+        >
+          <h1 className="text-2xl font-extrabold tracking-tight drop-shadow-md">RUC 3.0 Food Menu</h1>
+          <p className="text-purple-400 text-xs font-semibold mt-1 uppercase tracking-wider drop-shadow">Select your preferences below</p>
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-5">
@@ -61,13 +74,13 @@ export default function Home() {
 
           <div className="space-y-3">
             <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">Your Details</h2>
-            <input type="text" name="participant_name" required placeholder="Full Name" value={formData.participant_name} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-indigo-500 outline-none" />
-            <input type="tel" name="phone_number" required placeholder="Phone Number" value={formData.phone_number} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-indigo-500 outline-none" />
+            <input type="text" name="participant_name" required placeholder="Full Name" value={formData.participant_name} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-purple-500 outline-none" />
+            <input type="tel" name="phone_number" required placeholder="Phone Number (0xxxxxxxxx)" value={formData.phone_number} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-purple-500 outline-none" />
           </div>
 
           <div className="space-y-3 pt-2">
             <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">Day 1 Menu</h2>
-            <select name="day_1_supper" required value={formData.day_1_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <select name="day_1_supper" required value={formData.day_1_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-purple-500 outline-none">
               <option value="">Select Thursday Supper</option>
               <option value="Fried Rice with Chicken">Fried Rice with Chicken</option>
               <option value="Waakye with chicken">Waakye with chicken</option>
@@ -79,7 +92,7 @@ export default function Home() {
 
           <div className="space-y-3 pt-2">
             <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">Day 2 Menu</h2>
-            <select name="day_2_supper" required value={formData.day_2_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <select name="day_2_supper" required value={formData.day_2_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-purple-500 outline-none">
               <option value="">Select Friday Supper</option>
               <option value="Banku and tilapia with pepper">Banku and tilapia with pepper</option>
               <option value="Jollof Rice with Chicken">Jollof Rice with Chicken</option>
@@ -91,7 +104,7 @@ export default function Home() {
 
           <div className="space-y-3 pt-2">
             <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">Day 3 Menu</h2>
-            <select name="day_3_lunch" required value={formData.day_3_lunch} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <select name="day_3_lunch" required value={formData.day_3_lunch} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-purple-500 outline-none">
               <option value="">Select Saturday Lunch</option>
               <option value="Banku and tilapia with pepper">Banku and tilapia with pepper</option>
               <option value="Jollof Rice with Chicken">Jollof Rice with Chicken</option>
@@ -99,7 +112,7 @@ export default function Home() {
               <option value="Rice and stew with Chicken">Rice and stew with Chicken</option>
               <option value="Waakye with egg and wele">Waakye with egg and wele</option>
             </select>
-            <select name="day_3_supper" required value={formData.day_3_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <select name="day_3_supper" required value={formData.day_3_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-purple-500 outline-none">
               <option value="">Select Saturday Supper</option>
               <option value="Banku and tilapia with pepper">Banku and tilapia with pepper</option>
               <option value="Jollof Rice with Chicken">Jollof Rice with Chicken</option>
@@ -111,7 +124,7 @@ export default function Home() {
 
           <div className="space-y-3 pt-2">
             <h2 className="text-sm font-semibold text-slate-800 uppercase tracking-wider">Day 4 Menu</h2>
-            <select name="day_4_lunch" required value={formData.day_4_lunch} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <select name="day_4_lunch" required value={formData.day_4_lunch} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-purple-500 outline-none">
               <option value="">Select Sunday Lunch</option>
               <option value="Fried Rice with Chicken">Fried Rice with Chicken</option>
               <option value="Waakye with chicken">Waakye with chicken</option>
@@ -121,7 +134,7 @@ export default function Home() {
             </select>
           </div>
 
-          <button type="submit" disabled={loading} className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 rounded-xl text-sm transition disabled:opacity-50 mt-4">
+          <button type="submit" disabled={loading} className="w-full bg-purple-900 hover:bg-purple-600 text-white font-medium py-2 rounded-xl text-sm transition disabled:opacity-50 mt-4">
             {loading ? 'Submitting...' : 'Save My Menu Choices'}
           </button>
         </form>
