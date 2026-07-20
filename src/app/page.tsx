@@ -46,9 +46,9 @@ export default function Home() {
 
   
   return (
-  <main className="min-h-screen bg-indigo-100 py-10 px-4 font-sans bg-fixed bg-center bg-cover bg-repeat flex items-center justify-center"
-        style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.61), rgba(248, 250, 252, 0.39)), url('/images/6.jpeg')", 
-          backgroundSize: "480px"
+  <main className="min-h-screen bg-indigo-100 py-14 px-6 font-sans bg-fixed bg-center bg-cover bg-repeat flex items-center justify-center"
+        style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.03), rgba(248, 250, 252, 0.01)), url('/images/6.jpeg')", 
+          backgroundSize: "600px"
         }}
         >
     
@@ -63,12 +63,12 @@ export default function Home() {
       {/* HEADING BANNER */}
       <div 
         className="bg-contain bg-center p-8 bg-stone-400 text-white text-center relative"
-        style={{ backgroundImage: "linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.76)), url('/images/logo1.png')", 
+        style={{ backgroundImage: "linear-gradient(rgba(4, 9, 29, 0.74), rgba(37, 31, 5, 0.7)), url('/images/logo2.png')", 
           backgroundSize: "150px"
         }}
       >
-        <h1 className="text-2xl text-stone-100 font-extrabold tracking-tight drop-shadow-md">RUC 3.0 Food Menu</h1>
-        <p className="text-stone-300 text-xs font-semibold mt-1 tracking-wider drop-shadow">Select your preferences below</p>
+        <h1 className="text-2xl text-stone-100 font-extrabold tracking-wide drop-shadow-md">RUC 3.0 Food Menu</h1>
+        <p className="text-slate-300 text-xs font-semibold mt-1 uppercase tracking-wider drop-shadow">Fa aduane a wobedi</p>
       </div>
 
       {/* FORM CONTENTS */}
@@ -131,8 +131,8 @@ export default function Home() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wider">Day 4 Menu</h2>
-            <select name="day_4_lunch" required value={formData.day_4_lunch} onChange={handleChange} className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm text-stone-900 bg-stone-100 focus:ring-2 focus:ring-stone-500 outline-none">
+            <h2 className="text-sm font-semibold text-amber-900 uppercase tracking-wider">Day 4 Menu</h2>
+            <select name="day_4_lunch" required value={formData.day_4_lunch} onChange={handleChange} className="w-full rounded-lg border border-amber-800 px-3 py-2 text-sm text-amber-900 bg-stone-100 focus:ring-2 focus:ring-amber-800 outline-none">
               <option value="">Select Sunday Lunch</option>
               <option value="Fried Rice with Chicken">Fried Rice with Chicken</option>
               <option value="Waakye with chicken">Waakye with chicken</option>
@@ -142,8 +142,8 @@ export default function Home() {
             </select>
           </div>
 
-          <button type="submit" disabled={loading} className="w-full bg-stone-700 hover:bg-stone-500 text-white font-medium py-2 rounded-xl text-sm transition disabled:opacity-50 mt-4">
-            {loading ? 'Submitting...' : 'Save My Menu Choices'}
+          <button type="submit" disabled={loading} className="w-full bg-amber-900 hover:bg-amber-800 text-white font-medium py-2 rounded-xl text-sm transition disabled:opacity-50 mt-4">
+            {loading ? 'Submitting...' : 'Save My Aduane Choices'}
           </button>
         </form>
       </div>
