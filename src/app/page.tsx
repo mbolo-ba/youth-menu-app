@@ -44,23 +44,31 @@ export default function Home() {
     }
   };
 
+  
   return (
-  <main className="min-h-screen bg-indigo-100 py-10 px-4 font-sans flex items-center justify-center">
+  <main className="min-h-screen bg-indigo-100 py-10 px-4 font-sans bg-fixed bg-center bg-cover bg-repeat flex items-center justify-center"
+        style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.61), rgba(248, 250, 252, 0.39)), url('/images/6.jpeg')", 
+          backgroundSize: "480px"
+        }}
+        >
     
     {/* CARD CONTAINER WITH WATERMARK INSIDE IT */}
     <div 
-      className="w-full max-w-md bg-slate-100 rounded-2xl shadow-xl border border-slate-200 overflow-hidden bg-fixed bg-center bg-repeat"
+      className="w-full max-w-md bg-slate-100 rounded-2xl shadow-xl border border-slate-200 overflow-hidden bg-center bg-repeat"
+      style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.73), rgba(248, 250, 252, 0.5)), url('/images/5.jpeg')", 
+          backgroundSize: "460px"
+        }}
       >
       
       {/* HEADING BANNER */}
       <div 
-        className="bg-contain bg-center p-8 text-white text-center relative"
-        style={{ backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)), url('/images/logo.png')", 
+        className="bg-contain bg-center p-8 bg-stone-400 text-white text-center relative"
+        style={{ backgroundImage: "linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.76)), url('/images/logo1.png')", 
           backgroundSize: "150px"
         }}
       >
-        <h1 className="text-2xl font-extrabold tracking-tight drop-shadow-md">RUC 3.0 Food Menu</h1>
-        <p className="text-indigo-200 text-xs font-semibold mt-1 tracking-wider drop-shadow">Select your preferences below</p>
+        <h1 className="text-2xl text-stone-100 font-extrabold tracking-tight drop-shadow-md">RUC 3.0 Food Menu</h1>
+        <p className="text-stone-300 text-xs font-semibold mt-1 tracking-wider drop-shadow">Select your preferences below</p>
       </div>
 
       {/* FORM CONTENTS */}
@@ -73,14 +81,14 @@ export default function Home() {
           )}
 
           <div className="space-y-3">
-            <h2 className="text-sm font-semibold text-blue-800 uppercase tracking-wider">Your Details</h2>
-            <input type="text" name="participant_name" required placeholder="Full Name" value={formData.participant_name} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-indigo-500 outline-none" />
-            <input type="tel" name="phone_number" required placeholder="Phone Number (0xxxxxxxxx)" value={formData.phone_number} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-indigo-500 outline-none" />
+            <h2 className="text-sm font-semibold text-stone-600 uppercase tracking-wider">Your Details</h2>
+            <input type="text" name="participant_name" required placeholder="Full Name" value={formData.participant_name} onChange={handleChange} className="w-full rounded-lg border border-stone-400 px-3 py-2 text-sm text-stone-700 focus:ring-2 focus:ring-stone-300 outline-none" />
+            <input type="tel" name="phone_number" required placeholder="Phone Number (0xxxxxxxxx)" value={formData.phone_number} onChange={handleChange} className="w-full rounded-lg border border-stone-400 px-3 py-2 text-sm text-stone-700 focus:ring-2 focus:ring-stone-300 outline-none" />
           </div>
 
           <div className="space-y-3 pt-2">
-            <h2 className="text-sm font-semibold text-indigo-400 uppercase tracking-wider">Day 1 Menu</h2>
-            <select name="day_1_supper" required value={formData.day_1_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <h2 className="text-sm font-semibold text-orange-800 uppercase tracking-wider">Day 1 Menu</h2>
+            <select name="day_1_supper" required value={formData.day_1_supper} onChange={handleChange} className="w-full rounded-lg border border-orange-700 px-3 py-2 text-sm text-orange-700 bg-stone-100 focus:ring-2 focus:ring-orange-700 outline-none">
               <option value="">Select Thursday Supper</option>
               <option value="Fried Rice with Chicken">Fried Rice with Chicken</option>
               <option value="Waakye with chicken">Waakye with chicken</option>
@@ -91,8 +99,8 @@ export default function Home() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h2 className="text-sm font-semibold text-indigo-500 uppercase tracking-wider">Day 2 Menu</h2>
-            <select name="day_2_supper" required value={formData.day_2_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <h2 className="text-sm font-semibold text-amber-600 uppercase tracking-wider">Day 2 Menu</h2>
+            <select name="day_2_supper" required value={formData.day_2_supper} onChange={handleChange} className="w-full rounded-lg border border-amber-500 px-3 py-2 text-sm text-amber-600 bg-stone-100 focus:ring-2 focus:ring-amber-500 outline-none">
               <option value="">Select Friday Supper</option>
               <option value="Banku and tilapia with pepper">Banku and tilapia with pepper</option>
               <option value="Jollof Rice with Chicken">Jollof Rice with Chicken</option>
@@ -103,8 +111,8 @@ export default function Home() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h2 className="text-sm font-semibold text-indigo-600 uppercase tracking-wider">Day 3 Menu</h2>
-            <select name="day_3_lunch" required value={formData.day_3_lunch} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <h2 className="text-sm font-semibold text-rose-700 uppercase tracking-wider">Day 3 Menu</h2>
+            <select name="day_3_lunch" required value={formData.day_3_lunch} onChange={handleChange} className="w-full rounded-lg border border-rose-300 px-3 py-2 text-sm text-rose-700 bg-stone-100 focus:ring-2 focus:ring-rose-500 outline-none">
               <option value="">Select Saturday Lunch</option>
               <option value="Banku and tilapia with pepper">Banku and tilapia with pepper</option>
               <option value="Jollof Rice with Chicken">Jollof Rice with Chicken</option>
@@ -112,7 +120,7 @@ export default function Home() {
               <option value="Rice and stew with Chicken">Rice and stew with Chicken</option>
               <option value="Waakye with egg and wele">Waakye with egg and wele</option>
             </select>
-            <select name="day_3_supper" required value={formData.day_3_supper} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <select name="day_3_supper" required value={formData.day_3_supper} onChange={handleChange} className="w-full rounded-lg border border-rose-300 px-3 py-2 text-sm text-rose-700 bg-stone-100 focus:ring-2 focus:ring-rose-500 outline-none">
               <option value="">Select Saturday Supper</option>
               <option value="Banku and tilapia with pepper">Banku and tilapia with pepper</option>
               <option value="Jollof Rice with Chicken">Jollof Rice with Chicken</option>
@@ -123,8 +131,8 @@ export default function Home() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h2 className="text-sm font-semibold text-indigo-800 uppercase tracking-wider">Day 4 Menu</h2>
-            <select name="day_4_lunch" required value={formData.day_4_lunch} onChange={handleChange} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+            <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wider">Day 4 Menu</h2>
+            <select name="day_4_lunch" required value={formData.day_4_lunch} onChange={handleChange} className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm text-stone-900 bg-stone-100 focus:ring-2 focus:ring-stone-500 outline-none">
               <option value="">Select Sunday Lunch</option>
               <option value="Fried Rice with Chicken">Fried Rice with Chicken</option>
               <option value="Waakye with chicken">Waakye with chicken</option>
@@ -134,7 +142,7 @@ export default function Home() {
             </select>
           </div>
 
-          <button type="submit" disabled={loading} className="w-full bg-indigo-900 hover:bg-indigo-600 text-white font-medium py-2 rounded-xl text-sm transition disabled:opacity-50 mt-4">
+          <button type="submit" disabled={loading} className="w-full bg-stone-700 hover:bg-stone-500 text-white font-medium py-2 rounded-xl text-sm transition disabled:opacity-50 mt-4">
             {loading ? 'Submitting...' : 'Save My Menu Choices'}
           </button>
         </form>
