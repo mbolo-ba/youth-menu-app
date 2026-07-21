@@ -46,29 +46,29 @@ export default function Home() {
 
   
   return (
-  <main className="min-h-screen bg-indigo-100 py-14 px-6 font-sans bg-fixed bg-center bg-cover bg-repeat flex items-center justify-center"
-        style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.03), rgba(248, 250, 252, 0.01)), url('/images/6.jpeg')", 
-          backgroundSize: "600px"
+  <main className="min-h-screen bg-indigo-100 py-14 px-8 font-sans bg-fixed bg-center bg-contain bg-repeat flex items-center justify-center"
+        style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.67), rgba(248, 250, 252, 0.7)), url('/images/logo2.png')", 
+          backgroundSize: "100px"
         }}
         >
     
     {/* CARD CONTAINER WITH WATERMARK INSIDE IT */}
     <div 
       className="w-full max-w-md bg-slate-100 rounded-2xl shadow-xl border border-slate-200 overflow-hidden bg-center bg-repeat"
-      style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.73), rgba(248, 250, 252, 0.5)), url('/images/5.jpeg')", 
+      style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.86), rgba(248, 250, 252, 0.67)), url('/images/5.jpeg')", 
           backgroundSize: "460px"
         }}
       >
       
       {/* HEADING BANNER */}
       <div 
-        className="bg-contain bg-center p-8 bg-stone-400 text-white text-center relative"
-        style={{ backgroundImage: "linear-gradient(rgba(4, 9, 29, 0.74), rgba(37, 31, 5, 0.7)), url('/images/logo2.png')", 
+        className="bg-contain bg-center p-8 text-white text-center relative"
+        /*style={{ backgroundImage: "linear-gradient(rgba(4, 9, 29, 0.8), rgba(35, 47, 68, 0.81)), url('/images/logo2.png')",
           backgroundSize: "150px"
-        }}
+        }}*/
       >
-        <h1 className="text-2xl text-stone-100 font-extrabold tracking-wide drop-shadow-md">RUC 3.0 Food Menu</h1>
-        <p className="text-slate-300 text-xs font-semibold mt-1 uppercase tracking-wider drop-shadow">Fa aduane a wobedi</p>
+        <h1 className="text-3xl text-amber-900 font-extrabold uppercase tracking-tight drop-shadow-md">RUC 3.0 Food Menu</h1>
+        <p className="text-slate-600 text-xs font-semibold mt-1 tracking-wider drop-shadow">Select your preferences below</p>
       </div>
 
       {/* FORM CONTENTS */}
@@ -81,7 +81,7 @@ export default function Home() {
           )}
 
           <div className="space-y-3">
-            <h2 className="text-sm font-semibold text-stone-600 uppercase tracking-wider">Your Details</h2>
+            <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wider">Your Details</h2>
             <input type="text" name="participant_name" required placeholder="Full Name" value={formData.participant_name} onChange={handleChange} className="w-full rounded-lg border border-stone-400 px-3 py-2 text-sm text-stone-700 focus:ring-2 focus:ring-stone-300 outline-none" />
             <input type="tel" name="phone_number" required placeholder="Phone Number (0xxxxxxxxx)" value={formData.phone_number} onChange={handleChange} className="w-full rounded-lg border border-stone-400 px-3 py-2 text-sm text-stone-700 focus:ring-2 focus:ring-stone-300 outline-none" />
           </div>
