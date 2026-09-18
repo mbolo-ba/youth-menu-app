@@ -185,11 +185,11 @@ export default function Home() {
               onChange={handleChange}
               className="w-full rounded-xl bg-[#EBE8E5] border border-[#E65B17] px-3.5 py-2.5 text-sm text-[#3A283A] focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
             >
-              <option value="">Select Saturday Supper</option>
+              <option value="">Select Saturday Supper (RUC GALA)</option>
               <option value="Banku and tilapia with pepper">Banku and tilapia with pepper</option>
               <option value="Jollof Rice with Chicken">Jollof Rice with Chicken</option>
               <option value="Fried Rice with chicken">Fried Rice with chicken</option>
-              <option value="Rice and stew with Chicken">Rice and stew with Chicken</option>
+              <option value="Vegetable Rice and stew with Chicken">Vegetable Rice and stew with Chicken</option>
               <option value="Waakye with fish">Waakye with fish</option>
             </select>
           </div>
