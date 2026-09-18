@@ -220,7 +220,7 @@ export default function Home() {
             type="submit"
             disabled={loading}
             className="w-full text-white font-semibold py-3 rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 mt-4 active:scale-[0.99]"
-           
+           style={{ backgroundColor: '#602d9b' }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#FF7733')}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#602d9b')}
           >
