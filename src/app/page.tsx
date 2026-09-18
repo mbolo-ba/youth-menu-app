@@ -104,7 +104,7 @@ export default function Home() {
               placeholder="Full Name"
               value={formData.participant_name}
               onChange={handleChange}
-              className="w-full rounded-xl bg-[#EBE8E5] border border-[#E65B17] px-3.5 py-2.5 text-sm text-stone-200 placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
+              className="w-full rounded-xl bg-[#EBE8E5] border border-[#E65B17] px-3.5 py-2.5 text-sm text-[#3A283A] placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
             />
             <input
               type="tel"
@@ -113,7 +113,7 @@ export default function Home() {
               placeholder="Phone Number (0xxxxxxxxx)"
               value={formData.phone_number}
               onChange={handleChange}
-              className="w-full rounded-xl bg-[#EBE8E5] border border-[#E65B17] px-3.5 py-2.5 text-sm text-stone-200 placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
+              className="w-full rounded-xl bg-[#EBE8E5] border border-[#E65B17] px-3.5 py-2.5 text-sm text-[#3A283A] placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
             />
           </div>
 
