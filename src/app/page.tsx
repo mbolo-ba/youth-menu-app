@@ -61,20 +61,20 @@ export default function Home() {
       }}
     >
       {/* SEAMLESS INTEGRATED MENU CARD */}
-      <div className="w-full max-w-md bg-[#F3F1EF]/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-200/80 overflow-hidden"
-            style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.86), rgba(248, 250, 252, 0.67)), url('/images/5.jpeg')", 
-            backgroundSize: "460px"
+      <div className="w-full max-w-md bg-[#F3F1EF]/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-200/80 overflow-hidden bg-center bg-no repeat"
+            style={{ backgroundImage: "linear-gradient(rgba(248, 250, 252, 0.89), rgba(248, 250, 252, 0.84)), url('/images/logo4.png')", 
+            backgroundSize: "550px"
         }}
 
       >
         
         {/* ELEGANT HEADER BANNER WITH LIGHT ORANGE PILL ACCENT */}
         <div className="p-7 text-center space-y-2 border-b border-slate-200/60 bg-gradient-to-b from-white/60 to-transparent">
-          <h1 className="text-2xl font-bold tracking-tight text-purple-800">
+          <h1 className="text-3xl font-bold tracking-tight text-purple-800">
             RUC 3.0 Food Menu
           </h1>
           <div className="inline-block px-3 py-1 rounded-full bg-[#FF7733]/15 text-[#E65B17] text-[11px] font-bold tracking-wider uppercase">
-            Select your choices below
+            Select your preferences
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export default function Home() {
               placeholder="Full Name"
               value={formData.participant_name}
               onChange={handleChange}
-              className="w-full rounded-xl bg-[#EBE8E5] border border-stone-300 px-3.5 py-2.5 text-sm text-[#3A283A] placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
+              className="w-full rounded-xl bg-[#EBE8E5] border border-[#E65B17] px-3.5 py-2.5 text-sm text-stone-200 placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
             />
             <input
               type="tel"
@@ -113,7 +113,7 @@ export default function Home() {
               placeholder="Phone Number (0xxxxxxxxx)"
               value={formData.phone_number}
               onChange={handleChange}
-              className="w-full rounded-xl bg-[#EBE8E5] border border-stone-300 px-3.5 py-2.5 text-sm text-[#3A283A] placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
+              className="w-full rounded-xl bg-[#EBE8E5] border border-[#E65B17] px-3.5 py-2.5 text-sm text-stone-200 placeholder-stone-400 focus:bg-stone-100 focus:ring-2 focus:ring-[#FF7733]/40 focus:border-[#FF7733] outline-none transition"
             />
           </div>
 
@@ -220,9 +220,7 @@ export default function Home() {
             type="submit"
             disabled={loading}
             className="w-full text-white font-semibold py-3 rounded-xl text-sm transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 mt-4 active:scale-[0.99]"
-           /* style={{
-              backgroundColor: 'linear-gradient(135deg, #ebdafd 0%, #735aad 50%, #DDD6FE 100%)',
-            }}*/
+           
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#FF7733')}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#602d9b')}
           >
